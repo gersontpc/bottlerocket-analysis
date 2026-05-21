@@ -1,0 +1,19 @@
+```mermaid
+flowchart LR
+    DNS["app00.cloud.ihf"] --> NLB["NLB"]
+
+    NLB -->|"50%"| TG01["TG-01"]
+    NLB -->|"50%"| TG02["TG-02"]
+
+    TG01 --> GW01["Gateway | Kong"]
+    TG02 --> GW02["Gateway | Kong"]
+
+    GW01 --> CL01["HTTPRoute"]
+    GW02 --> CL02["HTTPRoute"]
+
+    CL01 --> SVC01["Service"]
+    CL02 --> SVC02["Service"]
+
+    SVC01 --> APP01["App-00"]
+    SVC02 --> APP02["App-00"]
+```

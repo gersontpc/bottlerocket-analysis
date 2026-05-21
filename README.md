@@ -27,6 +27,21 @@ Quando uma versão aparece no console da AWS antes de estar alinhada com release
 | Após a publicação da AMI | Rollout interrompido | A release informa que o rollout da `v1.58.0` foi interrompido por regressão em pull de imagens de container e recomenda `v1.59.0`. |
 | `2026-05-01` | Documentação `1.58.x` adicionada ao site | Commit [`3cdac2f2`](https://github.com/bottlerocket-os/bottlerocket-project-website/commit/3cdac2f2ad88c89a74a1ca6f112ddf614dc157e8) adiciona a documentação `1.58.x` e marca a versão como current. |
 
+---
+```mermaid
+gantt
+  title Linha do tempo — Bottlerocket v1.58.0 (datas das evidências)
+  dateFormat  YYYY-MM-DD
+  axisFormat  %m-%d
+  includes 2026-04-01,2026-04-07,2026-04-08,2026-05-01
+
+  section Evidências
+  AMI disponível no console :amipub, 2026-04-01, 1d
+  Release v1.58.0 (pre-release) - repo bottlerocket :release-pr, 2026-04-07, 1d
+  Rollout interrompido (pre-release)  - repo bottlerocket :rollout, 2026-04-08, 1d
+  Documentação publicada com a versão 1.58.x  :docs, 2026-05-01, 1d
+```
+
 ### Evidências
 
 #### 1. AMIs `v1.58.0` disponíveis na AWS em `2026-04-01`
